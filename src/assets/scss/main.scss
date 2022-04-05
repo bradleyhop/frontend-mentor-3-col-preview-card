@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// only one device breakpoint needed; mobile-first
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+body {
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop-breakpoint {
+    min-height: 100vh; // center veritcally
+  }
+}
+
