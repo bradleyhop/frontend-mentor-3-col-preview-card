@@ -8,7 +8,7 @@
 
 // only one device breakpoint needed; mobile-first
 @mixin desktop-breakpoint {
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     @content;
   }
 }
