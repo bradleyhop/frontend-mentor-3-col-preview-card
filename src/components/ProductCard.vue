@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  icon: String, // file location of img (as string)
+  icon: String, // file name of img (as string)
   iconAlt: String, // alt attr for img tag
   heading: String,
   body: String,
@@ -37,7 +37,8 @@ $card-color: v-bind("style.cardColor");
 }
 
 .icon-img {
-  width: 4.27rem;
+  width: 4.27em;
+  height: 2.67em;
   margin-bottom: 2.3rem;
 }
 
