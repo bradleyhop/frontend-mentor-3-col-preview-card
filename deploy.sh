@@ -9,9 +9,11 @@ cd dist/
 # wait
 
 git init
+git checkout main
 git add -A
 git commit -m 'deploy'
 
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:bradleyhop/frontend-mentor-3-col-preview-card.git main:gh-pages
 
 cd -

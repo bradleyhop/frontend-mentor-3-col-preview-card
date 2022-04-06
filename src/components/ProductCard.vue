@@ -1,39 +1,42 @@
-<script>
-export default {
-  props: {
-    icon: String, // file location of img
-    iconAlt: String, // alt attr for img tag
-    heading: String,
-    body: String,
-    bgColor: String, // using scss variables in colors.scss
-  },
-  data() {
-    return {
-      style: {
-        "--cardColor": this.bgColor, // main color of this card component
-      },
-    };
-  },
+<script setup>
+const props = defineProps({
+  icon: String, // file location of img (as string)
+  iconAlt: String, // alt attr for img tag
+  heading: String,
+  body: String,
+  bgColor: String, // main color of card
+});
+
+// main color of this card component; reference in <style>
+const style = {
+  cardColor: props.bgColor,
 };
+
+// import card image
+// NOTE: image will not render for npm run preview; vite bug? renders for dev
+// and build, tho
+const imgUrl = new URL(`../assets/images/${props.icon}`, import.meta.url).href;
 </script>
 
 <template>
-  <div class="card-wrapper" :style="{ backgroundColor: bgColor }">
-    <img :src="icon" :alt="iconAlt" class="icon" />
-    <h2 class="card-header">{{ heading.toUpperCase() }}</h2>
-    <p class="copy">{{ body }}</p>
-    <!-- add hover state for background and text color? -->
-    <a href="#" class="card-button" :style="{ style }"> Learn More </a>
-  </div>
+  <article class="card-wrapper">
+    <img :src="imgUrl" :alt="props.iconAlt" class="icon-img" />
+    <h2 class="card-header">{{ props.heading.toUpperCase() }}</h2>
+    <p class="copy">{{ props.body }}</p>
+    <a href="#" class="card-button"> Learn More </a>
+  </article>
 </template>
 
 <style lang="scss">
+$card-color: v-bind("style.cardColor");
+
 .card-wrapper {
   border-radius: 8px;
   padding: clamp(1.5rem, 3.2rem, 4rem);
+  background-color: $card-color;
 }
 
-.icon {
+.icon-img {
   width: 4.27rem;
   margin-bottom: 2.3rem;
 }
@@ -65,10 +68,10 @@ export default {
 
   // swap when hovering; uses props from parent
   background-color: $veryLightGray;
-  color: var(--cardColor);
+  color: $card-color;
 
   &:hover {
-    background-color: var(--cardColor);
+    background-color: $card-color;
     color: $veryLightGray;
   }
 }

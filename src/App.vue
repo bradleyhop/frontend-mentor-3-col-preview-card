@@ -1,11 +1,5 @@
-<script>
+<script setup>
 import ProductCard from "./components/ProductCard.vue";
-
-export default {
-  components: {
-    ProductCard,
-  },
-};
 </script>
 
 <template>
@@ -15,7 +9,7 @@ export default {
         heading="Sedans"
         body="Choose a sedan for its affordability and excellent fuel economy.
               Ideal for cruising in the city or on your next road trip."
-        icon="src/assets/images/icon-sedans.svg"
+        icon="icon-sedans.svg"
         icon-alt="icon of sedan automobile"
         bgColor="hsl(31, 77%, 52%)"
       />
@@ -24,7 +18,7 @@ export default {
         heading="SUVs"
         body="Take an SUV for its spacious interior, power, and versatility.
               Perfect for your next family vacation and off-road adventures."
-        icon="src/assets/images/icon-suvs.svg"
+        icon="icon-suvs.svg"
         icon-alt="icon of sports utility vehicle"
         bgColor="hsl(184, 100%, 22%)"
       />
@@ -33,7 +27,7 @@ export default {
         heading="Luxury"
         body="Cruise in the best car brands without the bloated prices.
               Enjoy the enhanced comfort of a luxury rental and arrive in style."
-        icon="src/assets/images/icon-luxury.svg"
+        icon="icon-luxury.svg"
         icon-alt="icon of luxury automobile"
         bgColor="hsl(179, 100%, 13%)"
       />
@@ -44,11 +38,17 @@ export default {
     <div class="attribution">
       Challenge by
       <a
-        href="https://www.frontendmentor.io?ref=challenge"
+        href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
         target="_blank"
         rel="noopener noreferrer"
         >Frontend Mentor</a
-      >. Coded by <a href="#" rel="noopener noreferrer">Bradley Smith</a>.
+      >. Code by
+      <a
+        href="https://github.com/bradleyhop/frontend-mentor-3-col-preview-card/tree/main"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Bradley Smith</a
+      >.
     </div>
   </footer>
 </template>
