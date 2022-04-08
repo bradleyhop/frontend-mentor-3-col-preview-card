@@ -56,9 +56,26 @@ import ProductCard from "./components/ProductCard.vue";
 <style lang="scss">
 .card-container {
   display: grid;
+  margin-top: 2rem;
+
+  // cards form a unit where the outer borders are curved
+  & :first-child {
+    border-radius: 12px 12px 0 0;
+  }
+  & > :last-of-type {
+    border-radius: 0 0 12px 12px;
+  }
 
   @include desktop-breakpoint {
+    margin: 0;
     grid-template-columns: repeat(3, 1fr);
+
+    & :first-child {
+      border-radius: 12px 0 0 12px;
+    }
+    & > :last-of-type {
+      border-radius: 0 12px 12px 0;
+    }
   }
 }
 
