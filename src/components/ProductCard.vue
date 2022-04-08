@@ -31,7 +31,7 @@ const imgUrl = new URL(`../assets/images/${props.icon}`, import.meta.url).href;
 $card-color: v-bind("style.cardColor");
 
 .card-wrapper {
-  border-radius: 8px;
+  // handle border-radius in parent
   padding: clamp(1.5rem, 3.2rem, 4rem);
   background-color: $card-color;
 }
