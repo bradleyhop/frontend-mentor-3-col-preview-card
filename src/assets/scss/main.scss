@@ -1,3 +1,7 @@
+// link in global color file
+@import './colors';
+
+// reset browser defaults
 *,
 *::before,
 *::after {
@@ -14,11 +18,12 @@
 }
 
 html {
+  // to get expected results in using 'rem'
   font-size: 15px;
 }
 
 body {
-  background-color: hsl(0, 0%, 95%);
+  background-color: $veryLightGray;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -92,6 +92,7 @@ import ProductCard from "./components/ProductCard.vue";
 
   & a {
     text-decoration: none;
+    font-weight: bold;
     color: black;
 
     &:hover {
