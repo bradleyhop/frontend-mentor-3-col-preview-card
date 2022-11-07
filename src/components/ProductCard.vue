@@ -21,7 +21,7 @@ const imgUrl = new URL(`../assets/images/${props.icon}`, import.meta.url).href;
 <template>
   <article class="card-wrapper">
     <img :src="imgUrl" :alt="props.iconAlt" class="icon-img" />
-    <h2 class="card-header">{{ props.heading.toUpperCase() }}</h2>
+    <h1 class="card-header">{{ props.heading.toUpperCase() }}</h1>
     <p class="copy">{{ props.body }}</p>
     <a href="#" class="card-button"> Learn More </a>
   </article>

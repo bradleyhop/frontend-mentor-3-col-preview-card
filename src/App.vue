@@ -3,35 +3,33 @@ import ProductCard from "./components/ProductCard.vue";
 </script>
 
 <template>
-  <main>
-    <div class="card-container">
-      <ProductCard
-        heading="Sedans"
-        body="Choose a sedan for its affordability and excellent fuel economy.
+  <main class="card-container">
+    <ProductCard
+      heading="Sedans"
+      body="Choose a sedan for its affordability and excellent fuel economy.
               Ideal for cruising in the city or on your next road trip."
-        icon="icon-sedans.svg"
-        icon-alt="icon of sedan automobile"
-        bgColor="hsl(31, 77%, 52%)"
-      />
+      icon="icon-sedans.svg"
+      icon-alt="icon of sedan automobile"
+      bgColor="hsl(31, 77%, 52%)"
+    />
 
-      <ProductCard
-        heading="SUVs"
-        body="Take an SUV for its spacious interior, power, and versatility.
+    <ProductCard
+      heading="SUVs"
+      body="Take an SUV for its spacious interior, power, and versatility.
               Perfect for your next family vacation and off-road adventures."
-        icon="icon-suvs.svg"
-        icon-alt="icon of sports utility vehicle"
-        bgColor="hsl(184, 100%, 22%)"
-      />
+      icon="icon-suvs.svg"
+      icon-alt="icon of sports utility vehicle"
+      bgColor="hsl(184, 100%, 22%)"
+    />
 
-      <ProductCard
-        heading="Luxury"
-        body="Cruise in the best car brands without the bloated prices.
+    <ProductCard
+      heading="Luxury"
+      body="Cruise in the best car brands without the bloated prices.
               Enjoy the enhanced comfort of a luxury rental and arrive in style."
-        icon="icon-luxury.svg"
-        icon-alt="icon of luxury automobile"
-        bgColor="hsl(179, 100%, 13%)"
-      />
-    </div>
+      icon="icon-luxury.svg"
+      icon-alt="icon of luxury automobile"
+      bgColor="hsl(179, 100%, 13%)"
+    />
   </main>
 
   <footer>
